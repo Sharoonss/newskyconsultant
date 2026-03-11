@@ -35,7 +35,7 @@ const Footer = () => {
   return (
     <footer className="bg-[#0F172A] text-white pt-16 pb-8">
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
           {/* Logo and Description */}
           <div>
             <div className="text-2xl font-bold mb-4">
@@ -45,18 +45,6 @@ const Footer = () => {
             <p className="text-gray-400 mb-6">
               Your trusted partner for education, migration, and sponsorship opportunities in Australia.
             </p>
-            <div className="flex space-x-4">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  aria-label={social.label}
-                  className="w-10 h-10 rounded-full bg-gray-800 hover:bg-[#8B1A1A] flex items-center justify-center transition-colors duration-300"
-                >
-                  <social.icon className="h-5 w-5" />
-                </a>
-              ))}
-            </div>
           </div>
 
           {/* Quick Links */}
@@ -109,6 +97,23 @@ const Footer = () => {
               ))}
             </ul>
           </div>
+          <div className="lg:col-span-1">
+  <div className="flex flex-col gap-2 w-full">
+    {socialLinks.map((social) => (
+      <a
+        key={social.label}
+        href={social.href}
+        aria-label={social.label}
+        className="flex items-center gap-3 px-4 py-2.5 rounded-lg bg-gray-800 hover:bg-gray-700 transition-colors duration-200 w-full"
+      >
+        <span className="flex items-center justify-center w-5 h-5 flex-shrink-0"> 
+                 <social.icon className="h-4 w-4 text-white" /> 
+        </span>
+        <span className="text-white text-sm font-medium">{social.label}</span>
+      </a>
+    ))}
+  </div>
+</div>
         </div>
 
         {/* Copyright */}

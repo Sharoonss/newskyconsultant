@@ -15,6 +15,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import Hero from '@/components/Hero';
 import Destination from "@/components/Destination";
 import CoreServices from '@/components/CoreServices';
+import FAQSection from '@/components/FAQSection';
 const HomePage = () => {
   const [currentDestination, setCurrentDestination] = useState(0);
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
@@ -318,59 +319,9 @@ const testimonials = [
   </div>
 </section>
 
-        {/* FAQ Section */}
-        <section className="py-16 bg-gray-50">
-          <div className="container mx-auto px-4 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              <div>
-                <h2 className="text-4xl font-bold text-gray-900 mb-4">Taking you to the destination you want to reach in case</h2>
-                <p className="text-xl text-gray-600 mb-8">Frequently asked questions</p>
-                <Accordion type="single" collapsible defaultValue="item-2">
-                  <AccordionItem value="item-1">
-                    <AccordionTrigger className="text-lg font-semibold">How can you help with visa application?</AccordionTrigger>
-                    <AccordionContent className="text-gray-600">
-                      We provide end-to-end visa assistance including documentation, application submission, and interview preparation.
-                    </AccordionContent>
-                  </AccordionItem>
-                  <AccordionItem value="item-2">
-                    <AccordionTrigger className="text-lg font-semibold">What services do you offer?</AccordionTrigger>
-                    <AccordionContent>
-                      <div className="bg-[#8B1A1A] text-white p-4 rounded-lg">
-                        <ul className="space-y-2">
-                          <li>• Admission Services</li>
-                          <li>• Visa Assistance</li>
-                          <li>• Accommodation Support</li>
-                          <li>• Professional Courses</li>
-                          <li>• English Test Preparation</li>
-                          <li>• NAATI CCL Services</li>
-                          <li>• Health Insurance</li>
-                          <li>• Skills Assessment</li>
-                        </ul>
-                      </div>
-                    </AccordionContent>
-                  </AccordionItem>
-                  <AccordionItem value="item-3">
-                    <AccordionTrigger className="text-lg font-semibold">Do I need health insurance?</AccordionTrigger>
-                    <AccordionContent className="text-gray-600">
-                      Yes, health insurance is mandatory for international students in Australia. We help you find the best coverage.
-                    </AccordionContent>
-                  </AccordionItem>
-                  <AccordionItem value="item-4">
-                    <AccordionTrigger className="text-lg font-semibold">How can I get in touch?</AccordionTrigger>
-                    <AccordionContent className="text-gray-600">
-                      You can contact us through our contact form, email, or phone. We're here to help you every step of the way.
-                    </AccordionContent>
-                  </AccordionItem>
-                </Accordion>
-              </div>
-              <div className="flex items-center justify-center">
-                <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800" alt="Consultation meeting" className="rounded-2xl shadow-2xl" />
-              </div>
-            </div>
-          </div>
-        </section>
+       
+< FAQSection />
 
-        {/* Success Stories Section */}
         {/* Success Stories Section */}
 <section className="py-16 bg-white">
   <div className="max-w-7xl mx-auto px-6">
